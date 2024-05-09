@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #03bb85;
+  color: #fff;
+  padding: 5px;
+}
+  
+header h1 {
+  margin: 0;
+  padding: 10px;
+
+}
+a{
+  color: #0e301a !important
+}
+
+nav a:hover {
+    background-color: #03bb85 !important;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+main {
+  margin: 5% 30%;
+}
+
+#agendar {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.bg-green-nutri{
+  background-color: #a1ecd9;
+}
+
+.btn-green-nutri{
+  background-color: #03bb85 !important;
+
+}
+form {
+  display: flex;  
+  flex-direction: column;
+  color: #0e301a !important;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  
+}
+
+
+footer {
+  background-color: #03bb85;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+section h1 {
+  align-content: center;
+  align-items: center;
+}
+
+.bem-vindo {
+  color: #0e301a !important; 
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 5%;
+}
