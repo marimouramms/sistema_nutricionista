@@ -19,6 +19,10 @@ a{
   color: #0e301a !important
 }
 
+nav {
+  display: none;
+}
+
 nav a:hover {
     background-color: #027748 !important;
     border-radius: 5px;
