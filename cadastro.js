@@ -10,7 +10,6 @@ document.getElementById('crud-form').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value;
     const telefone = document.getElementById('telefone').value;
     adicionarItem(matricula, nome, idade, peso, altura, email, telefone);
-
 //limpar campos doo formulário
     document.getElementById('matricula').value = ' ';
     document.getElementById('nome').value = ' ';
@@ -31,7 +30,6 @@ document.getElementById('crud-form').addEventListener('submit', function(event) 
     function adicionarItem(matricula, nome, idade, peso, altura, email, telefone) {
         listaClientes.push({matricula, nome, idade, peso, altura, email, telefone});
         atualizarTabela();
-
     }
 
 // função para atualizar tabela
@@ -40,7 +38,7 @@ document.getElementById('crud-form').addEventListener('submit', function(event) 
         const tableBody = document.getElementById('tableBody');
         tableBody.innerHTML = ' ';
         listaClientes.array.forEach(item => {
-            const row = <tr>
+            const row = `<tr>
                 <td> ${item.matricula}</td>
                 <td> ${item.nome}</td>
                 <td> ${item.idade}</td>
@@ -48,8 +46,18 @@ document.getElementById('crud-form').addEventListener('submit', function(event) 
                 <td> ${item.altura}</td>
                 <td> ${item.email}</td>
                 <td> ${item.telefone}</td>
-
-           
-            </tr>
+                <td>
+                    <button type="button" class=" " onclick="deleteItem('${item.email}')">Excluir</button>
+                </td>
+            </tr>`;
+        tableBody.innerHTML += row;
         });
     }
+
+    //função para excluir um item da lista
+
+    function excluirItem(email) {
+        listaClientes = listaClientes.filter(item => item.email !== email);
+        atualizarTabela();
+    
+    }   
